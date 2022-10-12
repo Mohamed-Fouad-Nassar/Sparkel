@@ -1,0 +1,177 @@
+@use './placeholders' as *;
+@use './variables' as *;
+
+/* Start Global Rules:- */
+
+* {
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-family: 'Raleway', sans-serif;
+    background-position: center;
+    background-size: cover;
+    @extend %transition;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    @extend %reset;
+    position: relative;
+}
+
+::-moz-selection {
+    background: $black-color;
+    color: $main-color;
+}
+
+::selection {
+    background: $black-color;
+    color: $main-color;
+}
+
+::after,
+::before {
+    @extend %transition;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    @extend %reset;
+    li {
+        @extend %reset;
+        width: 100%;
+        margin: 0 {
+            top: 10px;
+            bottom: 10px;
+        }
+        a {
+            color: $main-para-color;
+            &:hover {
+                margin-left: 10px;
+                color: $sec-color;
+            }
+        }
+    }
+}
+
+img {
+    max-width: 100%;
+    width: 100%;
+}
+
+p {
+    line-height: 1.8;
+    color: $main-para-color;
+}
+
+a,
+input[type="submit"],
+input[type="button"] {
+    @extend %link;
+}
+
+.container {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+/* Start Media Quires:- */
+
+@media (max-width: 575px) {
+    .container {
+        padding: 0 10px;
+        width: 100%;
+    }
+}
+
+@media (min-width: 576px) {
+    .container {
+        width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        width: 1320px;
+    }
+}
+
+
+/* End Media Quires */
+
+
+/* Start Buttons Styling:- */
+
+input[type="button"] {
+    background-color: $main-color;
+    color: $black-color;
+    border: 1px solid $main-color;
+    padding: $main-element-padding 30px;
+    margin: 0 auto;
+    display: block;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.8rem;
+    &:hover {
+        background-color: transparent;
+        color: $white-color;
+    }
+}
+
+
+/* End Buttons Styling */
+
+
+/* Start Sec-Heading Styling:- */
+
+.heading {
+    padding-bottom: $up-down-padding;
+    max-width: 850px;
+    text-align: center;
+    margin: 0 auto;
+    .image {
+        width: 70px;
+        margin: 0 auto;
+    }
+    h1 {
+        margin: 30px 0;
+        letter-spacing: 10px;
+        font-size: 1.6rem;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    p {
+        margin: 0;
+    }
+}
+
+
+/* End Sec-Heading Styling */
+
+
+/* End Global Rules */

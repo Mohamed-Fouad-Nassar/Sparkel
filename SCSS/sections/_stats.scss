@@ -1,0 +1,34 @@
+@use '../global/variables' as *;
+@use '../global/placeholders' as *;
+
+/* Start Stats Styling:- */
+
+.stats {
+    padding: $up-down-padding 0;
+    background-color: $dark-background-color;
+    .container {
+        @extend %grid-200-30;
+        article {
+            text-align: center;
+            background-color: $white-color;
+            padding: $main-element-padding;
+            h1 {
+                margin: 0;
+                font: {
+                    weight: 600;
+                    size: 1.5rem;
+                }
+            }
+            p {
+                font-weight: 600;
+                text-transform: uppercase;
+                margin: 0 {
+                    top: $main-element-padding;
+                }
+            }
+        }
+    }
+}
+
+
+/* End Stats Styling */

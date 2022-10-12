@@ -1,0 +1,38 @@
+@use '../global/variables' as *;
+@use '../global/placeholders' as *;
+
+/* Start Video Styling:- */
+
+.video {
+    padding: $up-down-padding * 2 0;
+    position: relative;
+    z-index: 3;
+    background-image: url(../Data/video-background-image.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $black-color;
+        opacity: 0.4;
+        z-index: -1;
+    }
+    .container {
+        input[type="button"] {
+            letter-spacing: 10px;
+            font-size: 1rem;
+            @media (max-width: 575px) {
+                & {
+                    letter-spacing: 5px;
+                }
+            }
+        }
+    }
+}
+
+
+/* End Video Styling */

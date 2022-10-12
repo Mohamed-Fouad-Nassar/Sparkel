@@ -1,0 +1,103 @@
+@use '../global/variables' as *;
+@use '../global/placeholders' as *;
+
+/* Start Footer Styling:- */
+
+footer {
+    padding: $up-down-padding 0;
+    background-color: $dark-background-color;
+    .container {
+        color: $main-para-color;
+        @extend %grid-200-30;
+        gap: 20px;
+        .data {
+            .logo {
+                max-width: 200px;
+                @media (max-width: 767px) {
+                    & {
+                        margin: 0 auto;
+                    }
+                }
+            }
+            p {
+                font-size: 0.8rem;
+                margin: $main-element-padding 0;
+            }
+            .rights {
+                padding: 10px 0;
+                p {
+                    margin: 0;
+                    > {
+                        a {
+                            color: $main-color;
+                            &:hover {
+                                color: $sec-color;
+                            }
+                        }
+                        span {
+                            color: $main-color;
+                        }
+                    }
+                }
+            }
+        }
+        .links,
+        .about {
+            font-size: 0.9rem;
+            h4 {
+                color: $white-color;
+            }
+        }
+        .contact {
+            font-size: 0.9rem;
+            h4 {
+                color: $white-color;
+            }
+            p {
+                margin: 20px 0;
+            }
+            input[type="button"] {
+                width: 100%;
+                @extend %border-radius-50;
+            }
+            .social-media {
+                width: -webkit-fit-content;
+                width: -moz-fit-content;
+                width: fit-content;
+                margin: 0 auto;
+                padding: 0 {
+                    top: 25px;
+                    bottom: 20px;
+                }
+                a {
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 45px;
+                    height: 45px;
+                    margin: 0 {
+                        left: 2px;
+                        right: 2px;
+                    }
+                    @extend %border-radius-50;
+                    background-color: $white-color;
+                    &:hover {
+                        background-color: $sec-color;
+                    }
+                    i {
+                        color: $black-color;
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+        }
+        @media (max-width: 767px) {
+            & {
+                text-align: center;
+            }
+        }
+    }
+}
+
+
+/* End Footer Styling */

@@ -1,0 +1,55 @@
+@use '../global/variables' as *;
+
+/* Start Landing Styling:- */
+
+.landing {
+    padding: 100px $sec-element-padding;
+    min-height: 500px;
+    height: 100vh;
+    color: $black-color;
+    background-image: url(../Data/landing-background-image-3.jpg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    h1,
+    p {
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: $up-down-padding - $sec-element-padding;
+    }
+    h1 {
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        font-weight: 600;
+        letter-spacing: $sec-element-padding;
+    }
+    p {
+        font-size: 1rem;
+        color: $black-color;
+        font-weight: 300;
+        letter-spacing: 5px;
+    }
+    input[type="button"] {
+        padding: $main-element-padding $up-down-padding;
+        letter-spacing: 5px;
+    }
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: $main-element-padding;
+        .down-link {
+            color: $white-color;
+            font-size: 2rem;
+        }
+        &:hover .down-link {
+            color: $sec-color;
+        }
+    }
+}
+
+
+/* End Landing Styling */

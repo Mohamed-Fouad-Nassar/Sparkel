@@ -1,0 +1,26 @@
+// global rules
+@use './global/global-rules' as *;
+// global variables
+@use './global/variables' as *;
+// header styling
+@use './sections/header' as *;
+// start main styling
+// landing styling
+@use './sections/landing' as *;
+// info styling 
+@use './sections/info';
+// services styling 
+@use './sections/services';
+// stats styling 
+@use './sections/stats';
+// portfolio styling 
+@use './sections/portfolio';
+// video styling 
+@use './sections/video';
+// team styling 
+@use './sections/team';
+// quotes styling 
+@use './sections/quotes';
+// end main styling
+// footer styling 
+@use './sections/footer';

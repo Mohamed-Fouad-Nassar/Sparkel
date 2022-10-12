@@ -1,0 +1,22 @@
+@use '../global/variables' as *;
+
+/* Start Info Styling:- */
+
+.info {
+    padding: $up-down-padding 0;
+    .container {
+        max-width: 700px;
+        text-align: center;
+        .image {
+            max-width: 150px;
+            margin: 0 auto;
+        }
+        p {
+            margin-top: 60px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+
+/* End Info Styling */
